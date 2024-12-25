@@ -1,0 +1,12 @@
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\bin\Debug\net8.0\GraphucsDLL.deps.json
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\bin\Debug\net8.0\GraphucsDLL.dll
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\bin\Debug\net8.0\GraphucsDLL.pdb
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\obj\Debug\net8.0\GraphucsDLL.csproj.AssemblyReference.cache
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\obj\Debug\net8.0\GraphucsDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\obj\Debug\net8.0\GraphucsDLL.AssemblyInfoInputs.cache
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\obj\Debug\net8.0\GraphucsDLL.AssemblyInfo.cs
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\obj\Debug\net8.0\GraphucsDLL.csproj.CoreCompileInputs.cache
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\obj\Debug\net8.0\GraphucsDLL.dll
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\obj\Debug\net8.0\refint\GraphucsDLL.dll
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\obj\Debug\net8.0\GraphucsDLL.pdb
+C:\LaciWork\Eger\Grafika\GraphucsDLL\GraphucsDLL\obj\Debug\net8.0\ref\GraphucsDLL.dll
