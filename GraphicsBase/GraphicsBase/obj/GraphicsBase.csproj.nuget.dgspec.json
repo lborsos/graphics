@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LaciWork\\Eger\\Grafika\\GraphicsBase\\GraphicsBase\\GraphicsBase.csproj": {}
+    "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\GraphicsBase.csproj": {}
   },
   "projects": {
-    "C:\\LaciWork\\Eger\\Grafika\\GraphicsBase\\GraphicsBase\\GraphicsBase.csproj": {
+    "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\GraphicsBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LaciWork\\Eger\\Grafika\\GraphicsBase\\GraphicsBase\\GraphicsBase.csproj",
+        "projectUniqueName": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\GraphicsBase.csproj",
         "projectName": "GraphicsBase",
-        "projectPath": "C:\\LaciWork\\Eger\\Grafika\\GraphicsBase\\GraphicsBase\\GraphicsBase.csproj",
+        "projectPath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\GraphicsBase.csproj",
         "packagesPath": "C:\\Users\\lbors\\.nuget\\packages\\",
-        "outputPath": "C:\\LaciWork\\Eger\\Grafika\\GraphicsBase\\GraphicsBase\\obj\\",
+        "outputPath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

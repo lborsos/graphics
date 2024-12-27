@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OScT2q135Mo=",
+  "dgSpecHash": "0VS4tk58DTI=",
   "success": true,
-  "projectFilePath": "C:\\LaciWork\\Eger\\Grafika\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj",
+  "projectFilePath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lbors\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0\\microsoft.win32.systemevents.9.0.0.nupkg.sha512",
     "C:\\Users\\lbors\\.nuget\\packages\\system.drawing.common\\9.0.0\\system.drawing.common.9.0.0.nupkg.sha512"

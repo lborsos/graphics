@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\05_HermiteArc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|c:\\laci_work\\grafika\\laci_work\\graphics\\05_hermitearc\\graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|solutionrelative:graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\05_HermiteArc\\graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|solutionrelative:graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\05_HermiteArc\\GraphicsBase\\Form1.cs",
+              "RelativeDocumentMoniker": "GraphicsBase\\Form1.cs",
+              "ToolTip": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\05_HermiteArc\\GraphicsBase\\Form1.cs",
+              "RelativeToolTip": "GraphicsBase\\Form1.cs",
+              "ViewState": "AgIAAAsAAABwl5mZmRkqwB8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T14:04:18.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\05_HermiteArc\\GraphicsBase\\Form1.cs",
+              "RelativeDocumentMoniker": "GraphicsBase\\Form1.cs",
+              "ToolTip": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\GraphicsBase\\GraphicsBase\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T14:01:39.71Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

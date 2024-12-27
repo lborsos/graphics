@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\LaciWork\\Eger\\Grafika\\GraphucsDLL\\",
+  "WorkspaceRootPath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laciwork\\eger\\grafika\\graphucsdll\\graphucsdll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laci_work\\grafika\\laci_work\\graphics\\graphucsdll\\graphucsdll\\extensiongraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\extensiongraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laci_work\\grafika\\laci_work\\graphics\\graphucsdll\\graphucsdll\\extensionpointf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\extensionpointf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laci_work\\grafika\\laci_work\\graphics\\graphucsdll\\graphucsdll\\hermite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\hermite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laci_work\\grafika\\laci_work\\graphics\\graphucsdll\\graphucsdll\\vector2f.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\vector2f.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\LaciWork\\Eger\\Grafika\\GraphucsDLL\\GraphucsDLL\\Class1.cs",
-              "RelativeDocumentMoniker": "GraphucsDLL\\Class1.cs",
-              "ToolTip": "C:\\LaciWork\\Eger\\Grafika\\GraphucsDLL\\GraphucsDLL\\Class1.cs",
-              "RelativeToolTip": "GraphucsDLL\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Hermite.cs",
+              "DocumentMoniker": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\Hermite.cs",
+              "RelativeDocumentMoniker": "GraphucsDLL\\Hermite.cs",
+              "ToolTip": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\Hermite.cs",
+              "RelativeToolTip": "GraphucsDLL\\Hermite.cs",
+              "ViewState": "AgIAAAIAAAA8zczMzMwXwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T13:36:28.54Z",
+              "WhenOpened": "2024-12-27T16:17:05.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Vector2F.cs",
+              "DocumentMoniker": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\Vector2F.cs",
+              "RelativeDocumentMoniker": "GraphucsDLL\\Vector2F.cs",
+              "ToolTip": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\Vector2F.cs",
+              "RelativeToolTip": "GraphucsDLL\\Vector2F.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAA9wDUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T16:03:24.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExtensionPointF.cs",
+              "DocumentMoniker": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\ExtensionPointF.cs",
+              "RelativeDocumentMoniker": "GraphucsDLL\\ExtensionPointF.cs",
+              "ToolTip": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\ExtensionPointF.cs",
+              "RelativeToolTip": "GraphucsDLL\\ExtensionPointF.cs",
+              "ViewState": "AgIAAAsAAACgzMzMzIwpwBYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T17:21:39.216Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExtensionGraphics.cs",
+              "DocumentMoniker": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\ExtensionGraphics.cs",
+              "RelativeDocumentMoniker": "GraphucsDLL\\ExtensionGraphics.cs",
+              "ToolTip": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\ExtensionGraphics.cs",
+              "RelativeToolTip": "GraphucsDLL\\ExtensionGraphics.cs",
+              "ViewState": "AgIAALkAAABAj5mZmZkrwMIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T17:19:28.165Z",
+              "EditorCaption": ""
             }
           ]
         }
