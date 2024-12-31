@@ -1,0 +1,5 @@
+﻿enum Dash
+{
+    dash,
+    space
+};

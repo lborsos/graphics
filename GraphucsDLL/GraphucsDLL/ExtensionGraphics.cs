@@ -6,13 +6,13 @@ namespace GraphucsDLL
 {
     public static class ExtensionGraphics
     {
-        public static void DrawPixel(this Graphics g, Pen pen, float x, float y)
+        public static void DrawPixel(this Graphics g, Pen pen, float x, float y, float size = 1f)
         {
-            g.DrawRectangle(pen, x, y, 0.5f, 0.5f);
+            g.DrawRectangle(pen, x, y, size == 1 ? 0.5f : size, size == 1 ? 0.5f : size);
         }
-        public static void DrawPixel(this Graphics g, Color color, float x, float y)
+        public static void DrawPixel(this Graphics g, Color color, float x, float y, float size = 1f)
         {
-            g.DrawRectangle(new Pen(color), x, y, 0.5f, 0.5f);
+            g.DrawRectangle(new Pen(color), x, y, size == 1 ? 0.5f : size, size == 1 ? 0.5f : size);
         }
         public static void DrawAndFillRectangle(this Graphics g, Pen pen, Brush brush, float x, float y, float width, float heigh)
         {
@@ -174,20 +174,215 @@ namespace GraphucsDLL
                 0f, 1f, 500, penWidth);
         }
 
+
+
+
+
+        public static void DrawLineMidpointV1(this Graphics g, Pen pen, float x0, float y0, float x1, float y1)
+        {
+            float d, x, y;
+            float dx = x1 - x0;
+            float dy = y1 - y0;
+            d = 2 * dy - dx;
+            x = x0;
+            y = y0;
+            for (int i = 1; i <= dx; i++)
+            {
+                g.DrawPixel(pen.Color, x, y);
+                if (d > 0)
+                {
+                    y++;
+                    d = d + 2 * (dy - dx);
+                }
+                else
+                {
+                    d = d + 2 * dy;
+                }
+                x++;
+            }
+        }
+
         // Home work
         public static void DrawLineMidpointV2(this Graphics g, Pen pen, float x0, float y0, float x1, float y1)
         {
+            float dx = MathF.Abs(x1 - x0);
+            float dy = MathF.Abs(y1 - y0);
+            float sx = x0 < x1 ? 1 : -1;
+            float sy = y0 < y1 ? 1 : -1;
+            bool steep = dy > dx;
 
+            if (steep) // ha meredek
+            {
+                (x0, y0) = (y0, x0); // tuple... C# 7.0 tol jelent meg (ket valtozo ertekenek felcserelese)
+                (x1, y1) = (y1, x1);
+
+                (dx, dy) = (dy, dx);
+                (sx, sy) = (sy, sx);
+            }
+
+            float d = 2 * dy - dx;
+            float x = x0;
+            float y = y0;
+
+            for (int i = 0; i <= dx; i++)
+            {
+                if (steep)
+                {
+                    g.DrawPixel(pen.Color, y, x);
+                }
+                else
+                {
+                    g.DrawPixel(pen.Color, x, y);
+                }
+
+                if (d > 0)
+                {
+                    y += sy;
+                    d -= 2 * dx;
+                }
+                d += 2 * dy;
+                x += sx;
+            }
         }
+
+
         // Home work
         public static void DrawLineMidpointV2(this Graphics g, Color c0, Color c1, float x0, float y0, float x1, float y1)
         {
+            float dx = MathF.Abs(x1 - x0);
+            float dy = MathF.Abs(y1 - y0);
+            float sx = x0 < x1 ? 1 : -1;
+            float sy = y0 < y1 ? 1 : -1;
+            bool steep = dy > dx;
 
+
+            if (steep) // ha meredek
+            {
+                (x0, y0) = (y0, x0); // tuple... C# 7.0 tol jelent meg (ket valtozo ertekenek felcserelese)
+                (x1, y1) = (y1, x1);
+
+                (dx, dy) = (dy, dx);
+                (sx, sy) = (sy, sx);
+            }
+
+            float R = c0.R;
+            float G = c0.G;
+            float B = c0.B;
+
+            float dR = c1.R - c0.R;
+            float dG = c1.G - c0.G;
+            float dB = c1.B - c0.B;
+
+            float nR = dR / dx;
+            float nG = dG / dx;
+            float nB = dB / dx;
+
+            float d = 2 * dy - dx;
+            float x = x0;
+            float y = y0;
+
+            Pen pen;
+            for (int i = 0; i <= dx; i++)
+            {
+                pen = new Pen(Color.FromArgb((int)R, (int)G, (int)B));
+
+                if (steep)
+                {
+                    g.DrawPixel(pen, y, x);
+                }
+                else
+                {
+                    g.DrawPixel(pen, x, y);
+                }
+
+                if (d > 0)
+                {
+                    y += sy;
+                    d -= 2 * dx;
+                }
+                d += 2 * dy;
+                x += sx;
+
+                R += nR;
+                G += nG;
+                B += nB;
+            }
         }
         // Project
         public static void DrawDashedLineMidpointV2(this Graphics g, int dashLenght, int spaceLenght, Color c0, Color c1, float x0, float y0, float x1, float y1)
         {
+            float dx = MathF.Abs(x1 - x0);
+            float dy = MathF.Abs(y1 - y0);
+            float sx = x0 < x1 ? 1 : -1;
+            float sy = y0 < y1 ? 1 : -1;
+            bool steep = dy > dx;
 
+
+            if (steep) // ha meredek
+            {
+                (x0, y0) = (y0, x0); // tuple... C# 7.0 tol jelent meg (ket valtozo ertekenek felcserelese)
+                (x1, y1) = (y1, x1);
+
+                (dx, dy) = (dy, dx);
+                (sx, sy) = (sy, sx);
+            }
+
+            float R = c0.R;
+            float G = c0.G;
+            float B = c0.B;
+
+            float dR = c1.R - c0.R;
+            float dG = c1.G - c0.G;
+            float dB = c1.B - c0.B;
+
+            float nR = dR / dx;
+            float nG = dG / dx;
+            float nB = dB / dx;
+
+            float d = 2 * dy - dx;
+            float x = x0;
+            float y = y0;
+
+            Pen pen;
+
+            int dashLeft = dashLenght;
+            Dash dash = Dash.dash;
+            for (int i = 0; i <= dx; i++)
+            {
+                pen = new Pen(Color.FromArgb((int)R, (int)G, (int)B));
+
+                if (dash == Dash.dash)
+                {
+                    if (steep)
+                    {
+                        g.DrawPixel(pen, y, x);
+                    }
+                    else
+                    {
+                        g.DrawPixel(pen, x, y);
+                    }
+                }
+                if (d > 0)
+                {
+                    y += sy;
+                    d -= 2 * dx;
+                }
+                d += 2 * dy;
+                x += sx;
+
+                R += nR;
+                G += nG;
+                B += nB;
+                dashLeft--;
+                if (dashLeft == 0)
+                {
+                    switch (dash)
+                    {
+                        case Dash.dash:  { dash = Dash.space; dashLeft = spaceLenght; break; }
+                        case Dash.space: { dash = Dash.dash; dashLeft = dashLenght; break; }
+                    }
+                }
+            }
         }
         // Home work
         public static void DrawMidPointCycle(this Graphics g, Pen pen, float x, float y, float r)

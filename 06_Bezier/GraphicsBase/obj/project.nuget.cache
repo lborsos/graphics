@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "IFI7oTX/7HQ=",
+  "success": true,
+  "projectFilePath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\06_Bezier\\GraphicsBase\\GraphicsBase.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lbors\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0\\microsoft.win32.systemevents.9.0.0.nupkg.sha512",
+    "C:\\Users\\lbors\\.nuget\\packages\\system.drawing.common\\9.0.0\\system.drawing.common.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
