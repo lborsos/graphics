@@ -385,16 +385,190 @@ namespace GraphucsDLL
             }
         }
         // Home work
-        public static void DrawMidPointCycle(this Graphics g, Pen pen, float x, float y, float r)
+        public static void DrawMidPointCircle(this Graphics g, Pen pen, float cx, float cy, float r)
         {
+            float x = 0;
+            float y = r;
+            float h = 1 - r;
 
+            DrawCirclePoints(g, pen, cx, cy, x, y);
+
+            while (y > x)
+            {
+                if (h < 0)
+                {
+                    h += 2 * x + 3;
+                }
+                else
+                {
+                    h += 2 * (x - y) + 5;
+                    y--;
+                }
+                x++;
+                DrawCirclePoints(g, pen, cx, cy, x, y); 
+            }
+        }
+
+        private static void DrawCirclePoints(Graphics g, Pen pen, float cx, float cy, float x, float y)
+        {
+            g.DrawPixel(pen, cx + x, cy + y);
+            g.DrawPixel(pen, cx - x, cy + y);
+            g.DrawPixel(pen, cx + x, cy - y);
+            g.DrawPixel(pen, cx - x, cy - y);
+            g.DrawPixel(pen, cx + y, cy + x);
+            g.DrawPixel(pen, cx - y, cy + x);
+            g.DrawPixel(pen, cx + y, cy - x);
+            g.DrawPixel(pen, cx - y, cy - x);
+        }
+
+        // Project
+        // a szinatmenet felulrol lefele kell legyen mindket oldalan a kornek (tukrozve)
+
+        public static void DrawMidPointCycleNotCompleted(this Graphics g, Color c0, Color c1, float cx, float cy, float r)
+        {
+            float x = 0;
+            float y = r;
+            float h = 1 - r;
+            float R = c0.R;
+            float G = c0.G;
+            float B = c0.B;
+            // temp variables for calc
+            float tR = c0.R;
+            float tG = c0.G;
+            float tB = c0.B;
+            float dR = c1.R - c0.R;
+            float dG = c1.G - c0.G;
+            float dB = c1.B - c0.B;
+            float distance = (float)Math.PI * r;
+            float nR = dR / distance / 4;
+            float nG = dG / distance / 4;
+            float nB = dB / distance / 4;
+            // sektoronkenti tavolsag
+            float sR = dR / 4;
+            float sG = dG / 4;
+            float sB = dB / 4;
+            int index = 0;
+            Pen pen = new Pen(Color.FromArgb((int)R, (int)G, (int)B));
+            g.DrawPixel(pen, cx + x, cy + y); // 1
+            g.DrawPixel(pen, cx - x, cy + y); // 2
+            g.DrawPixel(pen, cx + x, cy - y); // 3
+            g.DrawPixel(pen, cx - x, cy - y); // 4
+            g.DrawPixel(pen, cx + y, cy + x); // 5
+            g.DrawPixel(pen, cx - y, cy + x); // 6
+            g.DrawPixel(pen, cx + y, cy - x); // 7
+            g.DrawPixel(pen, cx - y, cy - x); // 8
+            while (y > x)
+            {
+                if (h < 0)
+                {
+                    h += 2 * x + 3;
+                }
+                else
+                {
+                    h += 2 * (x - y) + 5;
+                    y--;
+                }
+                x++;
+                //pen = new Pen(Color.FromArgb((int)R, (int)G, (int)B));
+                calcColor(index, 3, true);
+                g.DrawPixel(pen, cx + x, cy + y); // 1
+                g.DrawPixel(pen, cx - x, cy + y); // 2
+                calcColor(index, 0, false);
+                g.DrawPixel(pen, cx + x, cy - y); // 3
+                g.DrawPixel(pen, cx - x, cy - y); // 4
+                calcColor(index, 2, false);
+                g.DrawPixel(pen, cx + y, cy + x); // 5
+                g.DrawPixel(pen, cx - y, cy + x); // 6
+                calcColor(index, 1, true);
+                g.DrawPixel(pen, cx + y, cy - x); // 7
+                g.DrawPixel(pen, cx - y, cy - x); // 8
+                R += nR;
+                G += nG;
+                B += nB;
+                index++;
+            }
+            void calcColor(float index, int sector, bool reverse)
+            {
+                tR = MathF.Min(0, (MathF.Max(255, sR * sector + (reverse ? (sR - index) * nR : index * nR))));
+                tG = MathF.Min(0, (MathF.Max(255, sG * sector + (reverse ? (sG - index) * nG : index * nG))));
+                tB = MathF.Min(0, (MathF.Max(255, sB * sector + (reverse ? (sB - index) * nB : index * nB))));
+                pen = new Pen(Color.FromArgb((int)tR, (int)tG, (int)tB));
+            }
         }
         // Project
         // a szinatmenet felulrol lefele kell legyen mindket oldalan a kornek (tukrozve)
-        public static void DrawMidPointCycle(this Graphics g, Color c0, Color c1, float x, float y, float r)
-        {
 
+        public static void DrawMidPointCycle(this Graphics g, Color c0, Color c1, float cx, float cy, float r)
+        {
+            float x = 0;
+            float y = r;
+            float h = 1 - r;
+
+            float totalDistance = 2 * r;
+
+            float dR = c1.R - c0.R;
+            float dG = c1.G - c0.G;
+            float dB = c1.B - c0.B;
+
+            Pen pen;
+            void calculateColor(float currentY)
+            {
+                float progress = (currentY + r) / totalDistance;
+                progress = Math.Max(0, Math.Min(1, progress)); 
+
+                int R = (int)(c0.R + (dR * progress));
+                int G = (int)(c0.G + (dG * progress));
+                int B = (int)(c0.B + (dB * progress));
+
+                pen = new Pen(Color.FromArgb(R, G, B));
+            }
+
+            calculateColor(y);
+
+            // Kezdő pixelek rajzolása
+            g.DrawPixel(pen, cx + x, cy + y);
+            g.DrawPixel(pen, cx - x, cy + y);
+            calculateColor(-y);
+            g.DrawPixel(pen, cx + x, cy - y);
+            g.DrawPixel(pen, cx - x, cy - y);
+            calculateColor(x);
+            g.DrawPixel(pen, cx + y, cy + x);
+            g.DrawPixel(pen, cx - y, cy + x);
+            calculateColor(-x);
+            g.DrawPixel(pen, cx + y, cy - x);
+            g.DrawPixel(pen, cx - y, cy - x);
+
+            while (y > x)
+            {
+                if (h < 0)
+                {
+                    h += 2 * x + 3;
+                }
+                else
+                {
+                    h += 2 * (x - y) + 5;
+                    y--;
+                }
+                x++;
+
+                calculateColor(y);
+                g.DrawPixel(pen, cx + x, cy + y);
+                g.DrawPixel(pen, cx - x, cy + y);
+
+                calculateColor(-y);
+                g.DrawPixel(pen, cx + x, cy - y);
+                g.DrawPixel(pen, cx - x, cy - y);
+
+                calculateColor(x);
+                g.DrawPixel(pen, cx + y, cy + x);
+                g.DrawPixel(pen, cx - y, cy + x);
+
+                calculateColor(-x);
+                g.DrawPixel(pen, cx + y, cy - x);
+                g.DrawPixel(pen, cx - y, cy - x);
+            }
         }
+
 
         // this kulcsszo:
         // osztalyon belul onmagamra hivatkozok
