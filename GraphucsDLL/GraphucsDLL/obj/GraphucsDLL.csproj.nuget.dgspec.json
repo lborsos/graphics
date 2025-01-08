@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj": {}
+    "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj": {}
   },
   "projects": {
-    "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj": {
+    "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj",
+        "projectUniqueName": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj",
         "projectName": "GraphucsDLL",
-        "projectPath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj",
+        "projectPath": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\GraphucsDLL.csproj",
         "packagesPath": "C:\\Users\\lbors\\.nuget\\packages\\",
-        "outputPath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphucsDLL\\GraphucsDLL\\obj\\",
+        "outputPath": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

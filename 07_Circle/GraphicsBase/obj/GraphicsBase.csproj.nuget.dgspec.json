@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\07_Circle\\GraphicsBase\\GraphicsBase.csproj": {}
+    "C:\\LaciWork\\Eger\\graphics\\07_Circle\\GraphicsBase\\GraphicsBase.csproj": {}
   },
   "projects": {
-    "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\07_Circle\\GraphicsBase\\GraphicsBase.csproj": {
+    "C:\\LaciWork\\Eger\\graphics\\07_Circle\\GraphicsBase\\GraphicsBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\07_Circle\\GraphicsBase\\GraphicsBase.csproj",
+        "projectUniqueName": "C:\\LaciWork\\Eger\\graphics\\07_Circle\\GraphicsBase\\GraphicsBase.csproj",
         "projectName": "GraphicsBase",
-        "projectPath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\07_Circle\\GraphicsBase\\GraphicsBase.csproj",
+        "projectPath": "C:\\LaciWork\\Eger\\graphics\\07_Circle\\GraphicsBase\\GraphicsBase.csproj",
         "packagesPath": "C:\\Users\\lbors\\.nuget\\packages\\",
-        "outputPath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\07_Circle\\GraphicsBase\\obj\\",
+        "outputPath": "C:\\LaciWork\\Eger\\graphics\\07_Circle\\GraphicsBase\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -14,8 +14,8 @@ namespace GraphicsBase
         {
             g = e.Graphics;
             Pen pen = new Pen(Brushes.Blue, 1);
-            //g.DrawMidPointCircle(pen, 300, 300, 250);
-            g.DrawMidPointCycleNotCompleted(Color.White, Color.Yellow, 300, 300, 250);
+            g.DrawMidPointCircle(pen, 300, 300, 250);
+            //g.DrawMidPointCycleNotCompleted(Color.White, Color.Yellow, 300, 300, 250);
 
             g.DrawLineMidpointV2(Color.Blue, Color.Yellow, 400, 50, 700, 550);
         }
