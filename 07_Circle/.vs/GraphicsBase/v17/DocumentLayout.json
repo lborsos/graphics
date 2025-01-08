@@ -28,7 +28,11 @@
               "RelativeDocumentMoniker": "GraphicsBase\\Form1.cs",
               "ToolTip": "C:\\LaciWork\\Eger\\graphics\\07_Circle\\GraphicsBase\\Form1.cs",
               "RelativeToolTip": "GraphicsBase\\Form1.cs",
+<<<<<<< HEAD
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAAoAAABAAAAAAMAkwA4AAAAbAAAAAAAAAA==",
+>>>>>>> acea041b5b0691c41a1a4187430d4445e68a0378
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-01T20:19:14.829Z",
               "EditorCaption": ""
