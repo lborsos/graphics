@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\",
+  "WorkspaceRootPath": "C:\\LaciWork\\Eger\\graphics\\Minta ZH-2020-1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|c:\\laci_work\\grafika\\laci_work\\graphics\\graphicsbase\\graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|c:\\laciwork\\eger\\graphics\\minta zh-2020-1\\graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|solutionrelative:graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|c:\\laciwork\\eger\\graphics\\minta zh-2020-1\\graphicsbase\\rect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|solutionrelative:graphicsbase\\rect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|C:\\LaciWork\\Eger\\graphics\\Minta ZH-2020-1\\graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{36812A32-EF72-4834-B645-CFB0FE38EF7C}|GraphicsBase\\GraphicsBase.csproj|solutionrelative:graphicsbase\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,31 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rect.cs",
+              "DocumentMoniker": "C:\\LaciWork\\Eger\\graphics\\Minta ZH-2020-1\\GraphicsBase\\Rect.cs",
+              "RelativeDocumentMoniker": "GraphicsBase\\Rect.cs",
+              "ToolTip": "C:\\LaciWork\\Eger\\graphics\\Minta ZH-2020-1\\GraphicsBase\\Rect.cs",
+              "RelativeToolTip": "GraphicsBase\\Rect.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwC4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T15:31:51.811Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\Form1.cs",
+              "DocumentMoniker": "C:\\LaciWork\\Eger\\graphics\\Minta ZH-2020-1\\GraphicsBase\\Form1.cs",
               "RelativeDocumentMoniker": "GraphicsBase\\Form1.cs",
-              "ToolTip": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\Form1.cs",
+              "ToolTip": "C:\\LaciWork\\Eger\\graphics\\Minta ZH-2020-1\\GraphicsBase\\Form1.cs",
               "RelativeToolTip": "GraphicsBase\\Form1.cs",
-              "ViewState": "AgIAAB8AAAAAMzMzM7MpwAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-25T14:04:18.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\Form1.cs",
+              "DocumentMoniker": "C:\\LaciWork\\Eger\\graphics\\Minta ZH-2020-1\\GraphicsBase\\Form1.cs",
               "RelativeDocumentMoniker": "GraphicsBase\\Form1.cs",
-              "ToolTip": "C:\\Laci_Work\\Grafika\\Laci_work\\graphics\\GraphicsBase\\GraphicsBase\\Form1.cs [Design]",
+              "ToolTip": "C:\\LaciWork\\Eger\\graphics\\Minta ZH-2020-1\\GraphicsBase\\Form1.cs [Design]",
               "RelativeToolTip": "GraphicsBase\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T14:01:39.71Z"
+              "WhenOpened": "2024-12-25T14:01:39.71Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
