@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rpwBV4JdqtU=",
+  "success": true,
+  "projectFilePath": "C:\\LaciWork\\Eger\\graphics\\10_ParametricCurve3D\\GraphicsBase\\GraphicsBase.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lbors\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0\\microsoft.win32.systemevents.9.0.0.nupkg.sha512",
+    "C:\\Users\\lbors\\.nuget\\packages\\system.drawing.common\\9.0.0\\system.drawing.common.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

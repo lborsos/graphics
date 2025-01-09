@@ -701,7 +701,6 @@ namespace GraphucsDLL
                 g.DrawLineDDA(Color.White, Color.FromArgb(R, G, B), new PointF(cx, cy), new PointF(px, py));
             }
 
-            // A többi kód változatlan marad...
             DrawColorPixel(cx + x, cy + y);
             DrawColorPixel(cx - x, cy + y);
             DrawColorPixel(cx + x, cy - y);
@@ -849,6 +848,178 @@ namespace GraphucsDLL
         {
             //throw new ProjectException();
         }
+
+        // 3D
+        #region 3D graphics
+        private static Matrix4F projection  = Matrix4F.Projection.Parallel(0, 0, -1);
+        private static Matrix4F transformation;
+        public static Vector4F centerOfCanvas = new Vector4F(0, 0, 0);
+        private static Vector4F O = new Vector4F(0, 0, 0);
+        private static Vector4F E1 = new Vector4F(1, 0, 0);
+        private static Vector4F E2 = new Vector4F(0, 1, 0);
+        private static Vector4F E3 = new Vector4F(0, 0, 1);
+        private static Vector4F camera = new Vector4F(0, 0, 0);
+
+        public static Vector4F o { get { return Projection.Project(Transformation.Transform(O)); } }
+        public static Vector4F e1 { get { return Projection.Project(Transformation.Transform(E1)); } }
+        public static Vector4F e2 { get { return Projection.Project(Transformation.Transform(E2)); } }
+        public static Vector4F e3 { get { return Projection.Project(Transformation.Transform(E3)); } }
+
+        static ExtensionGraphics()
+        {
+            transformation = new Matrix4F();
+            transformation.LoadIdentity();
+        }
+        public static void SetProiection(Matrix4F p)
+        {
+            ExtensionGraphics.projection = p;
+        }
+
+        public static void LoadIdentity()
+        {
+            ExtensionGraphics.transformation.LoadIdentity();
+        }
+        public static void PushTransformation(Matrix4F p)
+        {
+            ExtensionGraphics.transformation = p * ExtensionGraphics.transformation;
+        }
+        public static class Projection
+        {
+            public static void SetParallel(float vx, float vy, float vz)
+            {
+                projection = Matrix4F.Projection.Parallel(vx, vy, vz);
+                camera = -1000000 * new Vector4F(vx, vy, vz);
+            }
+            public static void SetCentral(float s)
+            {
+                projection = Matrix4F.Projection.Central(s);
+                camera = new Vector4F(0, 0, s);
+            }
+            public static Vector4F Project(Vector4F v)
+            {
+                Vector4F res = projection * v;
+                res.ToCartesian();
+                res += centerOfCanvas;
+                return res;
+            }
+        }
+
+        public static class Transformation
+        {
+            public static void Push(Matrix4F trans)
+            {
+                transformation = trans * transformation;
+            }
+            public static void LoadIdentity()
+            {
+                transformation.LoadIdentity();
+            }
+            public static Vector4F Transform(Vector4F v)
+            {
+                return transformation * v;
+            }
+        }
+
+        public static void DrawParametricCurve3D(this Graphics g, Pen pen,
+            Func<float, float> x, Func<float, float> y, Func<float, float> z,
+            float a, float b, int n = 500)
+        {
+            if (b <= a)
+                throw new Exception("Wrong interval!");
+
+            float h = (b - a) / n;
+            float t = a;
+            Vector4F v0 = new Vector4F(x(t), y(t), z(t));
+            Vector4F pv0 = Projection.Project(Transformation.Transform(v0));
+            while (t < b)
+            {
+                t += h;
+                Vector4F v1 = new Vector4F(x(t), y(t), z(t));
+                Vector4F pv1 = Projection.Project(Transformation.Transform(v1));
+                g.DrawLine(pen, pv0, pv1);
+                pv0 = pv1;
+            }
+        }
+        public delegate float RRtoR(float x, float y);
+        public static void DrawParametricSurface(this Graphics g, Pen pen,
+            RRtoR x, RRtoR y, RRtoR z,
+            float a, float b,
+            float c, float d,
+            int du = 15, int dv = 15,
+            int nu = 500, int nv = 500)
+        {
+            float v = c;
+            float hv = (d - c) / dv;
+            while (v < d)
+            {
+                g.DrawParametricCurve3D(pen,
+                    _u => x(_u, v),
+                    _u => y(_u, v),
+                    _u => z(_u, v),
+                    a, b, nu);
+                v += hv;
+            }
+
+            float u = a;
+            float hu = (b - a) / du;
+            while (u < b)
+            {
+                g.DrawParametricCurve3D(pen,
+                    _v => x(u, _v),
+                    _v => y(u, _v),
+                    _v => z(u, _v),
+                    a, b, nu);
+                u += hu;
+            }
+        }
+        public static void DisplayBRep(this Graphics g, Pen pen, ModelBRep model, bool backfaceCulling = true)
+        {
+            foreach (Triangle triangle in model.triangles.OrderBy(t => t.WeightZ))
+            {
+                Vector4F a = Transformation.Transform(triangle.a);
+                Vector4F b = Transformation.Transform(triangle.b);
+                Vector4F c = Transformation.Transform(triangle.c);
+
+                Triangle tri = new Triangle(a, b, c);
+                if (!backfaceCulling || tri.IsVisible(camera))
+                {
+                    a = Projection.Project(a);
+                    b = Projection.Project(b);
+                    c = Projection.Project(c);
+
+                    g.DrawLine(pen, a, b);
+                    g.DrawLine(pen, c, b);
+                    g.DrawLine(pen, a, c);
+                }
+            }
+        }
+        public static void FlatShadingBRep(this Graphics g, Color color, ModelBRep model)
+        {
+            List<Triangle> transformed = new List<Triangle>();
+            foreach (Triangle triangle in model.triangles)
+            {
+                Vector4F a = Transformation.Transform(triangle.a);
+                Vector4F b = Transformation.Transform(triangle.b);
+                Vector4F c = Transformation.Transform(triangle.c);
+                transformed.Add(new Triangle(a, b, c));
+            }
+
+            foreach (Triangle triangle in transformed
+                                            .Where(t => t.IsVisible(camera))
+                                            .OrderBy(t => t.WeightZ))
+            {
+                Vector4F a = Projection.Project(triangle.a);
+                Vector4F b = Projection.Project(triangle.b);
+                Vector4F c = Projection.Project(triangle.c);
+
+                float visibilityValue = triangle.VisibilityValueA(camera);
+                Color col = Color.FromArgb((int)(visibilityValue * color.R),
+                                           (int)(visibilityValue * color.G),
+                                           (int)(visibilityValue * color.B));
+                g.FillPolygon(new SolidBrush(col), new PointF[] { a, b, c });
+            }
+        }
+        #endregion
 
     }
 }
