@@ -174,8 +174,20 @@ namespace GraphucsDLL
                 0f, 1f, 500, penWidth);
         }
 
-
-
+        public static void DrawBezier3P(this Graphics g, Pen pen, Bezier3P b, int n = 500)
+        {
+            g.DrawParametricCurve(pen,
+                t => Bezier3P.Basis.B0(t, b.p) * b.p0.x +
+                     Bezier3P.Basis.B1(t, b.p) * b.p1.x +
+                     Bezier3P.Basis.B2(t, b.p) * b.p2.x +
+                     Bezier3P.Basis.B3(t, b.p) * b.p3.x,
+                t => Bezier3P.Basis.B0(t, b.p) * b.p0.y +
+                     Bezier3P.Basis.B1(t, b.p) * b.p1.y +
+                     Bezier3P.Basis.B2(t, b.p) * b.p2.y +
+                     Bezier3P.Basis.B3(t, b.p) * b.p3.y,
+                0f, 1f, n);
+        }
+       
 
 
         public static void DrawLineMidpointV1(this Graphics g, Pen pen, float x0, float y0, float x1, float y1)
@@ -940,6 +952,15 @@ namespace GraphucsDLL
                 pv0 = pv1;
             }
         }
+
+
+        //Proiect
+        public static void DrawHermiteCurve3D(this Graphics g, Pen pen, List<Vector4F> v, int n = 500)
+        {
+
+        }
+
+
         public delegate float RRtoR(float x, float y);
         public static void DrawParametricSurface(this Graphics g, Pen pen,
             RRtoR x, RRtoR y, RRtoR z,

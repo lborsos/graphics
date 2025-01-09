@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GraphucsDLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aeebaf6fa10af54dcdfc8ccdee35c47d94d5d452")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a49c1a555c4878a695ded90c4c8237adfb9cd17")]
 [assembly: System.Reflection.AssemblyProductAttribute("GraphucsDLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GraphucsDLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
