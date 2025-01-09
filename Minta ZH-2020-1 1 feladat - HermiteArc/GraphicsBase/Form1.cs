@@ -30,7 +30,7 @@ namespace GraphicsBase
             float s = 1.5f;
             Hermite arc = new Hermite(p0, p1, s * (t0 - p0), s* (t1 - p1));
             //g.DrawHermiteArc(penArc, arc);
-            g.DrawHermiteArc(Color.Red, Color.Blue, arc, 3);
+            g.DrawHermiteArc(Color.Red, Color.Yellow, arc, 3);
         }
 
         private void canvas_MouseDown(object sender, MouseEventArgs e)

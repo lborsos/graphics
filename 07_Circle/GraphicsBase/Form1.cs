@@ -25,6 +25,10 @@ namespace GraphicsBase
 //>>>>>>> acea041b5b0691c41a1a4187430d4445e68a0378
 
             g.DrawLineMidpointV2(Color.Blue, Color.Yellow, 400, 50, 700, 550);
+
+            g.DrawCircleColorSpectrum(850, 200, 100);
+            //g.DrawCircleColorSpectrum2(850, 500, 100);
+            //g.DrawColorWheel(200, 200, 100);
         }
 
         private void canvas_MouseDown(object sender, MouseEventArgs e)

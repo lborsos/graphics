@@ -576,6 +576,165 @@ namespace GraphucsDLL
         }
 
 
+        //Projekt
+        public static void DrawCircleColorSpectrum(this Graphics g, float cx, float cy, float r)
+        {
+            float x = 0;
+            float y = r;
+            float h = 1 - r;
+
+            void DrawColorPixel(float px, float py)
+            {
+                // Szög számítás és konvertálás HSV-be (0-360)
+                float angle = (float)(Math.Atan2(py - cy, px - cx) * 180 / Math.PI + 180);
+
+                // HSV-ből közvetlen RGB konverzió
+                float sector = angle / 60;
+                int i = (int)Math.Floor(sector);
+                float f = sector - i;
+
+                byte v = 255;
+                byte p = 0;
+                byte q = (byte)(255 * (1 - f));
+                byte t = (byte)(255 * f);
+
+                Color color = i switch
+                {
+                    0 => Color.FromArgb(v, t, p),
+                    1 => Color.FromArgb(q, v, p),
+                    2 => Color.FromArgb(p, v, t),
+                    3 => Color.FromArgb(p, q, v),
+                    4 => Color.FromArgb(t, p, v),
+                    _ => Color.FromArgb(v, p, q)
+                };
+
+                g.DrawLineDDA(Color.White, color, new PointF(cx, cy), new PointF(px, py));
+            }
+
+            // A kör rajzolása változatlan marad
+            DrawColorPixel(cx + x, cy + y);
+            DrawColorPixel(cx - x, cy + y);
+            DrawColorPixel(cx + x, cy - y);
+            DrawColorPixel(cx - x, cy - y);
+            DrawColorPixel(cx + y, cy + x);
+            DrawColorPixel(cx - y, cy + x);
+            DrawColorPixel(cx + y, cy - x);
+            DrawColorPixel(cx - y, cy - x);
+
+            while (y > x)
+            {
+                if (h < 0)
+                    h += 2 * x + 3;
+                else
+                {
+                    h += 2 * (x - y) + 5;
+                    y--;
+                }
+                x++;
+                DrawColorPixel(cx + x, cy + y);
+                DrawColorPixel(cx - x, cy + y);
+                DrawColorPixel(cx + x, cy - y);
+                DrawColorPixel(cx - x, cy - y);
+                DrawColorPixel(cx + y, cy + x);
+                DrawColorPixel(cx - y, cy + x);
+                DrawColorPixel(cx + y, cy - x);
+                DrawColorPixel(cx - y, cy - x);
+            }
+        }
+
+        public static void DrawCircleColorSpectrum2(this Graphics g, float cx, float cy, float r)
+        {
+            float x = 0;
+            float y = r;
+            float h = 1 - r;
+
+            void DrawColorPixel(float px, float py)
+            {
+                // Számoljuk ki a szöget az adott pixelhez (most 0 foktól kezdve)
+                float angle = (float)Math.Atan2(py - cy, px - cx);
+                // Konvertáljuk 0-360 fokra, de most 90 fokkal eltoljuk, hogy a megfelelő helyen kezdődjön
+                float degrees = (float)(angle * 180 / Math.PI + 90);
+                if (degrees < 0) degrees += 360;
+
+                int R, G, B;
+
+                // 6 egyenlő részre osztjuk a 360 fokot (minden szín 60 fok)
+                degrees = degrees % 360;
+                float normalized = degrees / 60f;
+                int section = (int)normalized;
+                float remainder = normalized - section;
+
+                switch (section)
+                {
+                    case 0: // Ciánkék -> Zöld
+                        R = 0;
+                        G = 255;
+                        B = (int)(255 * (1 - remainder));
+                        break;
+                    case 1: // Zöld -> Sárga
+                        R = (int)(255 * remainder);
+                        G = 255;
+                        B = 0;
+                        break;
+                    case 2: // Sárga -> Piros
+                        R = 255;
+                        G = (int)(255 * (1 - remainder));
+                        B = 0;
+                        break;
+                    case 3: // Piros -> Lila
+                        R = 255;
+                        G = 0;
+                        B = (int)(255 * remainder);
+                        break;
+                    case 4: // Lila -> Kék
+                        R = (int)(255 * (1 - remainder));
+                        G = 0;
+                        B = 255;
+                        break;
+                    default: // Kék -> Ciánkék
+                        R = 0;
+                        G = (int)(255 * remainder);
+                        B = 255;
+                        break;
+                }
+
+                g.DrawLineDDA(Color.White, Color.FromArgb(R, G, B), new PointF(cx, cy), new PointF(px, py));
+            }
+
+            // A többi kód változatlan marad...
+            DrawColorPixel(cx + x, cy + y);
+            DrawColorPixel(cx - x, cy + y);
+            DrawColorPixel(cx + x, cy - y);
+            DrawColorPixel(cx - x, cy - y);
+            DrawColorPixel(cx + y, cy + x);
+            DrawColorPixel(cx - y, cy + x);
+            DrawColorPixel(cx + y, cy - x);
+            DrawColorPixel(cx - y, cy - x);
+
+            while (y > x)
+            {
+                if (h < 0)
+                {
+                    h += 2 * x + 3;
+                }
+                else
+                {
+                    h += 2 * (x - y) + 5;
+                    y--;
+                }
+                x++;
+
+                DrawColorPixel(cx + x, cy + y);
+                DrawColorPixel(cx - x, cy + y);
+                DrawColorPixel(cx + x, cy - y);
+                DrawColorPixel(cx - x, cy - y);
+                DrawColorPixel(cx + y, cy + x);
+                DrawColorPixel(cx - y, cy + x);
+                DrawColorPixel(cx + y, cy - x);
+                DrawColorPixel(cx - y, cy - x);
+            }
+        }
+
         // this kulcsszo:
         // osztalyon belul onmagamra hivatkozok
         // konstruktort hivok vele a sajat osztalyban

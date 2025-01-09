@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laciwork\\eger\\graphics\\graphucsdll\\graphucsdll\\vector2f.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\vector2f.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laciwork\\eger\\graphics\\graphucsdll\\graphucsdll\\extensiongraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\extensiongraphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laciwork\\eger\\graphics\\graphucsdll\\graphucsdll\\hermite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\hermite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laciwork\\eger\\graphics\\graphucsdll\\graphucsdll\\extensionpointf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\extensionpointf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laciwork\\eger\\graphics\\graphucsdll\\graphucsdll\\vector2f.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\vector2f.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laciwork\\eger\\graphics\\graphucsdll\\graphucsdll\\bezier3p.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laciwork\\eger\\graphics\\graphucsdll\\graphucsdll\\vector3f.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\vector3f.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|c:\\laciwork\\eger\\graphics\\graphucsdll\\graphucsdll\\hermite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F21E557A-551A-471F-A25E-7E39EAF47EBD}|GraphucsDLL\\GraphucsDLL.csproj|solutionrelative:graphucsdll\\hermite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Bezier3P.cs",
               "DocumentMoniker": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\Bezier3P.cs",
               "RelativeDocumentMoniker": "GraphucsDLL\\Bezier3P.cs",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BSpline.cs",
               "DocumentMoniker": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\BSpline.cs",
               "RelativeDocumentMoniker": "GraphucsDLL\\BSpline.cs",
@@ -66,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Vector3F.cs",
               "DocumentMoniker": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\Vector3F.cs",
               "RelativeDocumentMoniker": "GraphucsDLL\\Vector3F.cs",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Hermite.cs",
               "DocumentMoniker": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\Hermite.cs",
               "RelativeDocumentMoniker": "GraphucsDLL\\Hermite.cs",
@@ -86,11 +86,12 @@
               "RelativeToolTip": "GraphucsDLL\\Hermite.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T16:17:05.428Z"
+              "WhenOpened": "2024-12-27T16:17:05.428Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Vector2F.cs",
               "DocumentMoniker": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\Vector2F.cs",
               "RelativeDocumentMoniker": "GraphucsDLL\\Vector2F.cs",
@@ -98,8 +99,7 @@
               "RelativeToolTip": "GraphucsDLL\\Vector2F.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T16:03:24.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-27T16:03:24.075Z"
             },
             {
               "$type": "Document",
@@ -109,19 +109,19 @@
               "RelativeDocumentMoniker": "GraphucsDLL\\ExtensionPointF.cs",
               "ToolTip": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\ExtensionPointF.cs",
               "RelativeToolTip": "GraphucsDLL\\ExtensionPointF.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwAsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-25T17:21:39.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ExtensionGraphics.cs",
               "DocumentMoniker": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\ExtensionGraphics.cs",
               "RelativeDocumentMoniker": "GraphucsDLL\\ExtensionGraphics.cs",
-              "ToolTip": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\ExtensionGraphics.cs",
-              "RelativeToolTip": "GraphucsDLL\\ExtensionGraphics.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAYwIEAAABEAAAAAAAAAA==",
+              "ToolTip": "C:\\LaciWork\\Eger\\graphics\\GraphucsDLL\\GraphucsDLL\\ExtensionGraphics.cs*",
+              "RelativeToolTip": "GraphucsDLL\\ExtensionGraphics.cs*",
+              "ViewState": "AgIAAC8CAAAAAAAAAAAmwIICAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-25T17:19:28.165Z",
               "EditorCaption": ""
