@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LaciWork\\Eger\\graphics\\06_Bezier\\GraphicsBase\\GraphicsBase.csproj": {}
+    "C:\\LaciWork\\Eger\\graphics\\06_Bezier3P\\GraphicsBase\\GraphicsBase.csproj": {}
   },
   "projects": {
-    "C:\\LaciWork\\Eger\\graphics\\06_Bezier\\GraphicsBase\\GraphicsBase.csproj": {
+    "C:\\LaciWork\\Eger\\graphics\\06_Bezier3P\\GraphicsBase\\GraphicsBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LaciWork\\Eger\\graphics\\06_Bezier\\GraphicsBase\\GraphicsBase.csproj",
+        "projectUniqueName": "C:\\LaciWork\\Eger\\graphics\\06_Bezier3P\\GraphicsBase\\GraphicsBase.csproj",
         "projectName": "GraphicsBase",
-        "projectPath": "C:\\LaciWork\\Eger\\graphics\\06_Bezier\\GraphicsBase\\GraphicsBase.csproj",
+        "projectPath": "C:\\LaciWork\\Eger\\graphics\\06_Bezier3P\\GraphicsBase\\GraphicsBase.csproj",
         "packagesPath": "C:\\Users\\lbors\\.nuget\\packages\\",
-        "outputPath": "C:\\LaciWork\\Eger\\graphics\\06_Bezier\\GraphicsBase\\obj\\",
+        "outputPath": "C:\\LaciWork\\Eger\\graphics\\06_Bezier3P\\GraphicsBase\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZCfNFjRpsTU=",
+  "dgSpecHash": "yyCADrXs7XY=",
   "success": true,
-  "projectFilePath": "C:\\LaciWork\\Eger\\graphics\\06_Bezier\\GraphicsBase\\GraphicsBase.csproj",
+  "projectFilePath": "C:\\LaciWork\\Eger\\graphics\\06_Bezier3P\\GraphicsBase\\GraphicsBase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lbors\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0\\microsoft.win32.systemevents.9.0.0.nupkg.sha512",
     "C:\\Users\\lbors\\.nuget\\packages\\system.drawing.common\\9.0.0\\system.drawing.common.9.0.0.nupkg.sha512"

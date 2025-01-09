@@ -26,8 +26,8 @@ namespace GraphicsBase
             //g.DrawLineDDA(Color.Yellow, Color.Blue, p0, p1 );
 
             //g.DrawLineMidpointV2(penM, p0.X, p0.Y, p1.X, p1.Y);
-            g.DrawLineMidpointV2(Color.Blue, Color.Yellow, p0.X, p0.Y, p1.X, p1.Y);
-            //g.DrawDashedLineMidpointV2(20, 10, Color.Blue, Color.Yellow, p0.X, p0.Y, p1.X, p1.Y);
+            //g.DrawLineMidpointV2(Color.Blue, Color.Yellow, p0.X, p0.Y, p1.X, p1.Y);
+            g.DrawDashedLineMidpointV2(20, 10, Color.Blue, Color.Red, p0.X, p0.Y, p1.X, p1.Y);
 
             int x00 = 100;
             int y00 = 100;
