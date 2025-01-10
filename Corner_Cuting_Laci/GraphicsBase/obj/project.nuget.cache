@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4u0Qq6g4Hks=",
+  "success": true,
+  "projectFilePath": "C:\\LaciWork\\Eger\\graphics\\Corner_Cuting_Laci\\GraphicsBase\\GraphicsBase.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lbors\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.0\\microsoft.win32.systemevents.9.0.0.nupkg.sha512",
+    "C:\\Users\\lbors\\.nuget\\packages\\system.drawing.common\\9.0.0\\system.drawing.common.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
